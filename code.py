@@ -5,7 +5,7 @@ import utility
 images,names = utility.readImages()
 descriptors = utility.getDescriptors(images)
 # cap=cv2.VideoCapture("test.mp4")	#using video
-cap=cv2.VideoCapture(0)				#Runtime camera
+cap=cv2.VideoCapture(1,cv2.CAP_DSHOW)				#Runtime camera
 while(cap.isOpened()):
 	success,frame=cap.read()
 	if success:
